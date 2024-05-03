@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="content" description="Repositório de RPGs gratuitos!">
+  <meta charset="UTF-8">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+  h1, h2, h3 {
+   font-family: "Metamorphous"
+  }
+
+  </style>
+  <title></title>
+</head>
+<body style="background:#ccc;">
+<main class="m-5 p-5">
+  <span><!--ads---></span>
+  <center>
+  <h1>A Masmorra de 3 Dados, Um Jogo Solitário de Exploração de Masmorras</h1>
+<h2 class="text-secondary">por <a href="https://rpg.brentnewhall.com/author/brent/" target="_blank">Brent</a></h2>
+<h2 class="text-secondary">Tradução por <a href="https://almirpaulo.com/" target="_blank">Almir Paulo</a></h2>
+  </center>
+<p>
+Há quase um ano, Greywulf publicou o <a href="http://greywulf.net/2011/01/rpg-solitaire-challenge-3-dice/" target="_blank">RPG Solitaire Challenge: 3 Dice, a simple solitaire game of dungeon exploration</a>. Em seu jogo, você joga 3 dados para as estatísticas do seu aventureiro e, em seguida, para cada cômodo da masmorra, joga 1 dado para determinar o tipo de sala, 1 dado para um monstro e 1 dado para um tesouro.
+</p>
+<p>
+Joguei o jogo algumas vezes e, enquanto me divertia, encontrei dois problemas principais:
+<ol>
+  <li>
+ O jogo é muito instável. Joguei vários jogos em que morri em dois encontros e outros em que poderia ter continuado jogando para sempre.
+  </li>
+  <li>
+ Não há nada para fazer, exceto bater em monstros.
+  </li>
+</ol>
+</p>
+<p>
+No entanto, há uma possibilidade tentadora nas salas. Então, vamos adicionar um pouco de design e mapear a masmorra à medida que você avança!
+</p>
+
+<h2>A Masmorra de 3 Dados</h2>
+
+<p>A Masmorra de 3 Dados é uma expansão das regras do  <a href="http://greywulf.net/2011/01/rpg-solitaire-challenge-3-dice/" target="_blank">RPG Solitaire Challenge: 3 Dice, a simple solitaire game of dungeon exploration</a>.</p>
+
+<p>
+Você cria um personagem jogando três dados de seis lados (jogando novamente se o seu total for 10 ou menor). Um dado representa seu CORPO, outro sua MENTE e um terceiro seu ESPÍRITO (ou magia). Eles representam seus pontos atuais e máximos nesses atributos. Agora você está pronto para a aventura!
+</p>
+
+<p>Crie cada local jogando 3 dados (um para cada coluna) e consultando a tabela abaixo.</p>
+
+<table class="table table-dark table-striped">
+<thead>
+<tr>
+  <th>Resultado</th>
+  <th>Local</th>
+  <th>Monstro</th>
+  <th>Tesouro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Corredor (curvo ou reto)</td>
+  <td>Goblins</td>
+  <td>Nada</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Sala pequena (1d2 saídas)</td>
+  <td> Orcs</td>
+  <td>Poção de cura</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Sala grande (1D3 saídas)</td>
+  <td>Ogros</td>
+  <td>Espada Mágica </td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Cofre (1D3 saídas)</td>
+  <td>Gigantes</td>
+  <td>Tomo da Iluminação</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Templo (1D3 saídas)</td>
+  <td>Dragão</td>
+  <td>Pergaminho de Magia </td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Salão Principal (1D3+1 saídas)</td>
+  <td>Nada</td>
+  <td>Fragmento de mapa</td>
+</tr>
+</tbody>
+</table>
+
+<p><i>Mapeamento</i>: Desenhe este local em um pedaço de papel. Cada local ocupa aproximadamente o mesmo espaço no mapa geral e pode ter saídas para o norte, leste, sul e oeste. Você deve marcar as saídas logicamente (uma saída não pode levar a uma sala sem entrada desse lado), mas, caso contrário, as saídas podem estar onde você quiser.</p>
+
+<p><i>Quantas saídas são?</i> O número de saídas em cada cômodo inclui a que você entrou, então cada cômodo pode ser um beco sem saída.</p>
+
+<h2>Combate</h2>
+
+<p><i>Atacando</i>: Se a sala contém um monstro, você deve atacá-lo! Escolha um atributo e jogue um dado. Se você rolar menos do que o atributo, você acerta! Gire o dado do monstro para que ele mostre um ponto a menos. Quando você acerta um monstro que está em 1, ele é derrotado. Se você rolar igual ou maior que o atributo, o monstro acerta você; diminua o atributo escolhido para este ataque em 1.
+  </p>
+  <p><i>Sangrando</i>: Se um atributo for reduzido a 0, você recebe -1 em todas as jogadas de ataque. Se todos os três atributos forem reduzidos a 0, você está morto.
+    </p>
+    <p><i>Críticos</i>: Ao atacar, um 1 sempre acerta e um 6 sempre erra.</p>
+
+    <p><i>Rodinhas de Treinamento</i>: Em seu primeiro local, se você rolar 4 ou 5 para o monstro, role novamente (várias vezes, se necessário). Em seu segundo local, role novamente qualquer 5 para o monstro.</p>
+
+    <h2>Tesouro</h2>
+
+    <p>Uma vez que o monstro de um local é derrotado, você obtém o tesouro do local.</p>
+    <ul>
+      <li>Fragmento de mapa — Quando você está em um cofre, você pode usar um fragmento de mapa para desenterrar um poderoso artefato antigo (veja abaixo).</li>
+      <li> Poção de Cura — Aumente um atributo em 2 pontos, ou dois atributos em 1 ponto cada, até seus respectivos máximos.</li>
+      <li>Espada Mágica — +1 em todos os testes de CORPO. Isso é cumulativo, então se você tiver duas Espadas Mágicas, você adiciona +2 em todos os testes de CORPO </li>
+      <li>Tomo da Iluminação — +1 em todos os testes de MENTE. Isso também é cumulativo.</li>
+<li>Pergaminho de Magia — Use este pergaminho para um +3 em um teste de ESPÍRITO. O pergaminho desaparece quando usado.</li>
+    </ul>
+
+
+  <h2>XP</h2> 
+
+  <p>Quando você derrota um monstro (ou se não houver monstro na sala), totalize o valor de todos os três dados jogados para o local (sala, monstro e tesouro). Adicione isso ao seu total de XP.</p>
+
+  <p> <i>Subindo de nível</i>: para cada 50 XP que você ganha, aumente o máximo de um atributo e retorne todos os seus atributos aos seus valores máximos.</p>
+  <h2>Movendo-se pelo mapa</h2>
+
+  <p> <i>Retornando ao Perigo</i>: Quando você retorna a uma sala que já visitou, corre o risco de encontrar um monstro de baixo nível que entrou furtivamente na sala. Jogue um dado para um monstro errante. Se você rolar 3–6, não há monstro.</p>
+
+  <p><i>Teletransporte do Templo</i>: De um templo, você pode se teletransportar para qualquer outro templo já no mapa. Quando o fizer, role para um monstro errante. Você só pode se teletransportar depois de derrotar qualquer monstro na sala.</p>
+
+  <p><i>Descendo para o próximo nível</i>: Você só pode descer para o próximo nível da masmorra de um Grande Salão, e somente depois de ter coletado um artefato neste nível.</p>
+  <h2>Artefatos</h2>
+
+  <p>Role um dado para encontrar um artefato:</p>
+  <table class="table table-dark table-stripped">
+    <thead>
+<tr>
+  <th>Resultado</th>
+  <th>Artefato</th>
+  <tbody>
+</tr>
+    </thead>
+    <tr>
+      <td>1</td>
+      <td>Ídolo de Jade (+2 em uma jogada de ataque)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pingentes de Cristal (+3 em um teste de MENTE)</td>
+      <tr>
+        <td>3</td>
+        <td>Botas de Rapidez (corra de uma luta por nível de jogador para uma sala adjacente aleatória, sem penalidade)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Pergaminho de Teletransporte (depois de limpar uma sala, teletransporte-se para qualquer outra sala explorada; use uma vez)</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Pó do sono (faça com que um monstro durma; não ganhará XP pelo monstro, e quando este quarto for visitado novamente, ele estará acordado novamente)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Amuleto de Proteção (ignore um golpe contra você)
+Múltiplos jogadores</td>
+    </tr>
+  </tbody>
+  </table>
+  <h2>Múltiplos jogadores</h2>
+
+  <p>Para jogar com os outros, cada jogador rola suas próprias estatísticas. Em cada local, jogue um dado de monstro por jogador. O dado de monstro mais alto determina o tipo de monstros na sala; some todos os dados de monstros jogados para os pontos de vida do monstro.</p>
+
+  <p>Cada jogador ganha o total de XP para cada local (portanto, se um local fornecer 10 XP, cada jogador recebe 10 XP).</p>
+
+  <p>Observe que jogar com vários jogadores é mais difícil, porque você terá que compartilhar as recompensas.</p>
+
+  <h2>O Andar Morto-Vivo</h2>
+
+  <p>Finalmente, apenas por diversão, aqui está um andar com tema de mortos-vivos:</p>
+
+<table class="table table-dark table-striped">
+<thead>
+<tr>
+  <th>Resultado</th>
+  <th>Local</th>
+  <th>Monstro</th>
+  <th>Tesouro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Corredor (curvo ou reto)</td>
+  <td>Esqueletos</td>
+  <td>Fragmento de mapa</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Sala pequena (1d2 saídas)</td>
+  <td> Zumbis </td>
+  <td>Poção de cura</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Sala grande (1D3 saídas)</td>
+  <td>Múmias</td>
+  <td>Espada Mágica </td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Cripta (1D3 saídas)</td>
+  <td>Vampiro</td>
+  <td>Tomo da Iluminação</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Templo (1D3 saídas)</td>
+  <td>Lich </td>
+  <td>Pergaminho de Magia </td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Salão Principal (1D3+1 saídas)</td>
+  <td>Nada</td>
+  <td>Nada</td>
+</tr>
+</tbody>
+</table>
+<p><i>Criptas?</i> Uma cripta funciona como um cofre.</p>
+
+<p><i>Os Mortos-Vivos São Fracos Contra Magia</i>: Um ataque de ESPÍRITO contra mortos-vivos não falha automaticamente em um 6.</p>
+
+<p>É isso.</p>
+
+ <h1 class="float-start"><a href="../index.html" class="text-dark"><i class="bi bi-arrow-return-left"></i></a></h1>
+ <h1 class="float-end"><a href="" target="_blank" class="text-dark"><i class="bi bi-facebook"></i></a></h1>
+</main>
+  
+</body>
+</html>
