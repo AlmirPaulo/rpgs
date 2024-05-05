@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="content" description="Repositório de RPGs gratuitos!">
+  
+  <title>Oficina do Escriba</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+  h1, h2, h3, span {
+      font-family: "UnifrakturMaguntia"; 
+        }
+  </style>
+</head>
+<body style="background:#ccc;">
+  <main class="m-5">
+    <span><!--ads--></span>
+  <h1>Gerador de Imagens</h1>
+  <input class="form-control" type="text" id="prompt" />
+  <button class="btn btn-secondary" id="btn">Gerar</button>
+  <img src="" alt="" id="out">
+  <script>
+    /*
+URLs
+
+    */
+    //variables
+      var btn = document.getElementById("btn");
+      var prompt = document.getElementById("prompt");
+      var out = document.getElementById("out");
+      var url = " ";
+    //handling
+      function getImg(){
+        var req = new XMLHttpRequest();
+        req.open("GET", "https://www.reddit.com/r/FantasyImages/.json", true);
+        req.send();
+
+
+      };
+
+    //calling
+    btn.addEventListener("click", ()=> getImg());
+
+
+
+  </script>
+
+  <br />
+ <h1 class="float-start"><a href="../index.html" class="text-dark"><i class="bi bi-arrow-return-left"></i></a></h1>
+ <h1 class="float-end"><a href="https://www.facebook.com/groups/1509963336253310/" target="_blank" class="text-dark"><i class="bi bi-facebook"></i></a></h1>
+</main>
+</body>
