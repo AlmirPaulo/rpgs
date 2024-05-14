@@ -1,0 +1,15 @@
+Você é um vampiro cibernético com asas negras remendadas e unhas quebradas. Você comanda uma equipe de hackers loucos por sangue.
+
+Você tem 3 características. Pegue um livro em uma prateleira próxima. Escolha 3 palavras de uma página aleatória. 
+
+Você tem 3 atributos. (H)umanidade, (S)ede de sangue  e (C)redibilidade nas ruas. Aloque-os nos lados em branco de um d6. Cada atributo deve ter pelo menos um lado.
+
+(H)umanidade é sua alma torturada e tumulto interior. Quem não pode saber a verdade?
+(S)ede de sangue é o seu lado vampiro imprudente. Com quem você está tentando ferrar?
+(C)redibilidade nas ruas é a sua atração pelas gangues de hackers nas cavernas cibernéticas. Quem acha que você é foda?
+
+Você tem outro d6 com dois lados  (+) , três lados (-) e um lado ( ). Jogue os dois dados quando houver um conflito. O dado Mais/Em branco/Menos diz o que acontece, seu dado H/S/C diz como. (H)(+) é um triunfo de sua (H) umanidade, (C)(-) significa que sua (C)redibilidade nas ruas falhou com você, (S)( ) é uma complicação de sua (S)ede de sangue, etc.
+ 
+Você pode invocar cada uma de suas características uma vez por sessão para voltar a rolar.
+
+No final de uma sessão, você pode realocar seu H/S/C com base nos eventos da sessão.
